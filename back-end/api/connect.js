@@ -1,8 +1,7 @@
 import {MongoClient} from 'mongodb'
+import 'dotenv/config'
 
-const URI =  "mongodb+srv://rafaperj7:N9zZWGGIHzSVnzFJ@cluster0.bmwrs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
-const client = new MongoClient(URI)
+const client = new MongoClient(process.env.URI)
 
 export const db = client.db("spotify")
 
